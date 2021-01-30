@@ -6,12 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="app.css">
+
 </head>
 
 <body>
+    <h2>List of current book</h2>
+    <div class="books-container">
+        <ul class="book-list">
 
+        </ul>
+    </div>
 
-    <script src="app.js"></script>
+    <h2>Insert Your Book Here</h2>
+    <form>
+        <div>
+            <label for="author">Author</label><br>
+            <input type="text" id="author" value="">
+        </div><br>
+
+        <div>
+            <label for="title">Title</label><br>
+            <input type="text" id="title" value="">
+        </div><br>
+
+        <div>
+            <label for="page">Page number</label><br>
+            <input type="text" id="page" value="">
+        </div><br>
+
+        <div>
+            <input type="button" onclick="getObject();display_object();" value="Submit" />
+        </div>
+    </form>
+</body>
+
+<script src="app.js"></script>
 </body>
 
 </html>
