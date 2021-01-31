@@ -16,14 +16,19 @@ function getObject() {
 }
 
 function display_object() {
-    let e = " ";
-    let target = document.getElementById("list-container");
-    myLibrary.forEach(element => {
-        for (let keys in element) {
-            e += (`<p><b>${keys} :</b> ${element[keys]} </p>`);
-        }
 
-    })
+    let e = "";
 
-    target.innerHTML = e;
+    for (i = 0; i < myLibrary.length; i++) {
+        e += '<div class= "book-card">';
+        e += "<p><b>Author</b>: " + myLibrary[i].author + '</p>';
+        e += "<p><b>Title</b>: " + myLibrary[i].title + '</p>';
+        e += "<p><b>Page</b>: " + myLibrary[i].page; + '</p>';
+        e += '<p> <button type="button">Mark as read </button> &nbsp;'
+        e += '<button type="button" onclick = "delete_book();" >Delete This Book </button> </p>'
+        e += '</div>';
+    }
+
+    document.getElementById("card").innerHTML = e;
 }
+
