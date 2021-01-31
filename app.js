@@ -16,16 +16,14 @@ function getObject() {
 }
 
 function display_object() {
-
     let e = "";
-
     for (i = 0; i < myLibrary.length; i++) {
         e += '<div class= "book-card">';
         e += "<p><b>Author</b>: " + myLibrary[i].author + '</p>';
         e += "<p><b>Title</b>: " + myLibrary[i].title + '</p>';
         e += "<p><b>Page</b>: " + myLibrary[i].page; + '</p>';
-        e += '<p> <button type="button">Mark as read </button> &nbsp;'
-        e += '<button type="button" onclick = "delete_book();" >Delete This Book </button> </p>'
+        e += '<p><button type="button" class="check">Mark as read </button> </p>';
+        e += '<p><button type="button" class="delete" onclick = "delete_book();" >Delete This Book </button> </p>'
         e += '</div>';
     }
 
