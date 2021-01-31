@@ -32,3 +32,7 @@ function display_object() {
     document.getElementById("card").innerHTML = e;
 }
 
+function delete_book() {
+    let to_delete = document.querySelector(".book-card");
+    to_delete.remove();
+}
