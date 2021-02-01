@@ -4,13 +4,13 @@
 
 > Insert your favorite books inside this app, Mark those you have already read!
 
-![screenshot](https://user-images.githubusercontent.com/47100064/106446839-cb5f7b80-6491-11eb-9b0f-b655700ec062.png)
+![screenshot](https://user-images.githubusercontent.com/47100064/106447464-93a50380-6492-11eb-80ba-2cc6dd361b49.png)
 
 This application is for front-end only though, your data will disappear after a page refresh
 
 ## Built With
 
-- Html-Css
+- Html-CSS
 - Javascript
 - Vscode
 
