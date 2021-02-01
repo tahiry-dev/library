@@ -4,13 +4,13 @@
 
 > Insert your favorite books inside this app, Mark those you have already read!
 
-![screenshot](./app_screenshot.png)
+![screenshot](https://user-images.githubusercontent.com/47100064/106447464-93a50380-6492-11eb-80ba-2cc6dd361b49.png)
 
 This application is for front-end only though, your data will disappear after a page refresh
 
 ## Built With
 
-- Html-Css
+- Html-CSS
 - Javascript
 - Vscode
 
@@ -19,6 +19,7 @@ This application is for front-end only though, your data will disappear after a 
 To get a local copy up and running follow these simple example steps:
 
 -Download the Zip file that contains the code
+
 -Open the index.html file with your favorite browser
 
 ## Author
@@ -33,7 +34,7 @@ To get a local copy up and running follow these simple example steps:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/tahiry-dev/library/issues).
 
 ## Show your support
 
