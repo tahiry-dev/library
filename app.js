@@ -18,6 +18,7 @@ function getObject() {
 function display_object() {
     let e = "";
     for (i = 0; i < myLibrary.length; i++) {
+
         e += '<div class= "book-card">';
         e += "<p><b>Author</b>: " + myLibrary[i].author + '</p>';
         e += "<p><b>Title</b>: " + myLibrary[i].title + '</p>';
@@ -31,6 +32,6 @@ function display_object() {
 }
 
 function delete_book() {
-    let to_delete = document.querySelector(".book-card");
-    to_delete.remove();
+    const container = document.getElementById("card");
+    container.innerHTML = " ";
 }
