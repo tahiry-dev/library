@@ -1,37 +1,44 @@
-let myLibrary = []
-let i = 0;
+let myLibrary = [];
+let id = 1;
 
-function Book(author, title, page) {
-    this.author = author
-    this.title = title
-    this.page = page
+function Book(author, title, page, id) {
+    this.author = author;
+    this.title = title;
+    this.page = page;
+    this.id = id;
 }
 
-function getObject() {
-    myLibrary[i] = new Book(document.getElementById("author").value, document.getElementById("title").value, document.getElementById("page").value)
-    i++;
+function addBook() {
+    const book = new Book(document.getElementById("author").value, document.getElementById("title").value, document.getElementById("page").value, id);
+    id++;
+    myLibrary.push(book);
     document.getElementById("author").value = "";
     document.getElementById("title").value = "";
     document.getElementById("page").value = "";
 }
 
-function display_object() {
-    let e = "";
-    for (i = 0; i < myLibrary.length; i++) {
-
-        e += '<div class= "book-card">';
-        e += "<p><b>Author</b>: " + myLibrary[i].author + '</p>';
-        e += "<p><b>Title</b>: " + myLibrary[i].title + '</p>';
-        e += "<p><b>Page</b>: " + myLibrary[i].page; + '</p>';
-        e += '<p><button type="button" class="check">Mark as read </button> </p>';
-        e += '<p><button type="button" class="delete" onclick = "delete_book();" >Delete This Book </button> </p>'
-        e += '</div>';
+function displayBooks() {
+    let e = '';
+    for (let i = 0; i < myLibrary.length; i++) {
+        e += `
+          <article class="book-card">
+            <p><b>Author</b>: ${myLibrary[i].author}</p>
+            <p><b>Title</b>: ${myLibrary[i].title} </p>
+            <p><b>Page</b>: ${myLibrary[i].page} </p>
+            <p>
+              <button type="button" class="check">Mark as read </button>
+            </p>
+            <p>
+              <button type="button" class="delete" onclick ="delete_book(${myLibrary[i].id})">Delete This Book</button>
+            </p>
+          </article>
+          `;
     }
 
-    document.getElementById("card").innerHTML = e;
+    document.getElementById('card').innerHTML = e;
 }
 
-function delete_book() {
-    const container = document.getElementById("card");
-    container.innerHTML = " ";
+function delete_book(id) {
+    myLibrary = myLibrary.filter((book) => book.id !== id);
+    displayBooks();
 }
